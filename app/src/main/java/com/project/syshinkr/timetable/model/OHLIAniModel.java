@@ -1,4 +1,4 @@
-package com.example.admin.timetable.Model;
+package com.project.syshinkr.timetable.model;
 
 import com.google.gson.annotations.SerializedName;
 

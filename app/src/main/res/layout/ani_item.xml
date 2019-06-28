@@ -1,59 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/itemLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/conLayout"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:paddingBottom="14dp"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:paddingTop="12dp">
+        android:layout_height="64dp">
 
-        <LinearLayout
-            android:id="@+id/aniItem_layout"
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/timeText"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="time"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="00:00"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="Title"
+            android:textColor="@color/item_title_color"
+            android:textSize="@dimen/title_text"
+            app:layout_constraintBottom_toTopOf="@id/genreText"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/timeText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/genreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/titleText"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Title"
-                android:textColor="@color/Black"
-                android:textSize="@dimen/title_text" />
-
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/extraText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Extra"
-                android:textSize="@dimen/extra_text" />
-
-        </LinearLayout>
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="genre"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="Extra"
+            android:textColor="@color/item_extra_color"
+            android:textSize="@dimen/extra_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/timeText"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
 
         <ImageButton
             android:id="@+id/favorite"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="28dp"
-            android:layout_toStartOf="@+id/aniItem_layout" />
-    </RelativeLayout>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/baseline_favorite_border_black_18dp"
+            android:contentDescription="favorite button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_end="56dp"
+            android:orientation="vertical"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/lightGray"></LinearLayout>
+        android:layout_below="@+id/conLayout"
+        android:background="@color/lightGray" />
 
-</LinearLayout>
+</RelativeLayout>

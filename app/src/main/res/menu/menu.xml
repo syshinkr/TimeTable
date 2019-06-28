@@ -8,12 +8,9 @@
         android:title="즐겨찾기"
         app:showAsAction="ifRoom"
         />
-    <item
-        android:id="@+id/action_info"
-        android:icon="@drawable/information_variant"
-        android:title="앱 정보"
-        app:showAsAction="ifRoom"
-        />
+
+    <!-- TODO : 새로고침 추가 -->
+
     <item
         android:id="@+id/action_title_asc"
         android:title="이름순(오름차)"

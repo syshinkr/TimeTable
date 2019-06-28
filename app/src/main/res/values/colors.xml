@@ -6,6 +6,6 @@
     <color name="White">#FFFFFF</color>
     <color name="lightGray">#D3D3D3</color>
     <color name="Black">#000000</color>
-    <color name="item_title_color">#000000de</color>
-    <color name="item_extra_color">#00000099</color>
+    <color name="item_title_color">#de000000</color>
+    <color name="item_extra_color">#99000000</color>
 </resources>

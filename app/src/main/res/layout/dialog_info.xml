@@ -4,20 +4,92 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:text="앱 정보"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
-        android:paddingStart="18dp"
+    <!-- title -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:layout_height="64dp" />
-    <TextView
-        android:layout_margin="16dp"
-        android:textSize="16sp"
-        android:id="@+id/infoDiaog_textview_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="앱 정보"
+            android:textColor="@color/item_title_color"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+    <!-- content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_name_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=" - Name -"
+            android:textColor="@color/item_extra_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_name_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="애니편성표 ver 1.0"
+            android:textColor="@color/item_title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_dev_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="- Dev -"
+            android:textColor="@color/item_extra_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_dev_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="syshinkr228@gmail.com"
+            android:textColor="@color/item_title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_API_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="- API -"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/infoDiaog_textview_API_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="애니시아"
+            android:textColor="@color/item_title_color"
+            android:textSize="18sp" />
+    </LinearLayout>
 </LinearLayout>

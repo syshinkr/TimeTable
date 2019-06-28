@@ -1,10 +1,13 @@
-package com.example.admin.timetable.Model;
+package com.project.syshinkr.timetable.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class OHLICaptionModel {
+public class CrrntOHLICaptionModel {
     @SerializedName("d")
     private String date;
+
+    @SerializedName("t")
+    private String title;
 
     @SerializedName("s")
     private float episode;
@@ -18,8 +21,9 @@ public class OHLICaptionModel {
     @SerializedName("p")
     private int point;
 
-    public OHLICaptionModel(String date, float episode, String name, String link, int point) {
+    public CrrntOHLICaptionModel(String date, String title, float episode, String name, String link, int point) {
         this.date = date;
+        this.title = title;
         this.episode = episode;
         this.name = name;
         this.link = link;
@@ -32,6 +36,14 @@ public class OHLICaptionModel {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public float getEpisode() {

@@ -1,4 +1,4 @@
-package com.example.admin.timetable;
+package com.project.syshinkr.timetable;
 
 import org.junit.Test;
 
